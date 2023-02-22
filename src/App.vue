@@ -1,21 +1,151 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 </script>
 
 <template>
   <div
-    class="flex flex-col bg-no-repeat bg-cover w-full font-bold stars bg-[#FFF6ED] text-[#194027] text-base min-h-full font-space"
+    class="flex flex-col bg-no-repeat bg-cover w-full font-bold stars bg-[#FFF6ED] text-[#194027] text-base min-h-full font-raleway lg:items-center animate__fadeIn"
   >
-  <div class="flex flex-col md:flex-row justify-around items-center content-center"> 
-    <div class="my-name flex uppercase text-8xl">
-      Dahlia <br> Salem
-    </div> 
-    <div class="my-image flex">
-      <img src="@/assets/pic.jpg" 
-      class="mx-auto sm:max-w-md lg:max-w-xl h-80">
-    </div> 
-  </div>
+    <div class="all-content flex flex-col max-w-5xl lg:max-w-7xl mx-10 md:mx-28">
+      <div
+        class="flex flex-col lg:flex-row my-20 items-center"
+      >
+        <div class="my-name flex uppercase text-4xl sm:text-3xl md:text-8xl font-bold mb-10 mx-auto ">
+          Dahlia <br/>
+          Salem
+        </div>
+        <div class="my-image flex">
+          <img
+            src="@/assets/pic.jpg"
+            class="mx-auto sm:max-w-md lg:max-w-xl rounded-t-full object-contain"
+          />
+        </div>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row justify-around content-center border-t-2 border-[#194027] pt-10 border-opacity-40 mb-60"
+      >
+        <div class="my-name flex uppercase font-extrabold pr-10 pb-4 lg;pb-0">
+          About Dahlia
+        </div>
+        <div class="my-image flex text-xl sm:text-3xl flex-wrap">
+          I am an ex-Google Engineer with more than 4 years of silicon valley
+          industry experience, I bring a unique mixture of excellent technical
+          ability and excellent communication skills that guarantee the success
+          of any project.
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between mb-80">
+        <div class="my-name flex flex-wrap text-xl sm:text-3xl max-w-3xl">
+          At the United Nations, <br /><br />
+          I led the first nation-wide initiative to advance STEM education
+          across 6 distinct districts in Egypt.<br /><br />
+          Under my leadership the ILO was able to deliver a 4-tiered program to
+          target weaknesses in the STEM education pipeline at every step of the
+          way including high school, college and the ultimate transition to the
+          workforce.<br /><br />
+          I successfully managed and delivered the 1 million GBP program along
+          with powerful stakeholders such as Ministry of Higher Education in
+          Egypt and the Foreign, Commonwealth and Development Office in Britain.
+        </div>
+        <div class="my-image flex text-2xl">
+          <img
+            src="@/assets/unlogo.png"
+            class="object-contain"
+            width="400px"
+            height="400px"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between mb-80">
+        <div class="my-image flex text-2xl">
+          <img
+            src="@/assets/google.png"
+            class="object-contain"
+            width="400px"
+            height="400px"
+          />
+        </div>
+        <div class="my-name flex flex-wrap text-xl sm:text-3xl max-w-3xl">
+          At Google, <br /><br />
+          I contributed to the success of two different product teams by
+          immediately making strong technical and system design
+          contributions.<br /><br />
+          At Google Hire I built the backend infrastructure required to reveal
+          important data insights to customers as well the backend
+          infrastructure responsible for integrating third party tools such as
+          HackerRank & Codility. <br /><br />
+          At Firebase hosting I built the middleware infrastructure needed to
+          create a version-controlled system knows as “Preview Channels” which
+          became the fundamental abstraction customers used to interact with the
+          service.
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between mb-80">
+        <div class="my-name flex flex-wrap text-xl sm:text-3xl max-w-3xl">
+          At Yup, <br /><br />
+          I was employee number 5 who built the foundational processes necessary
+          to hire and manage the schedules of hundreds of online tutors
+          distributed around the globe.<br /><br />
+          I used sophisticated Google Sheets along with several server scripts
+          to create a preliminary system that schedules and manages tutor
+          availability for the 24-hour tutoring service.<br /><br />
+          In addition, I designed and graded the hiring exams necessary to vet
+          and on board new tutors on to the platform.
+        </div>
+        <div class="my-image flex text-2xl">
+          <img
+            src="@/assets/yup.svg"
+            class="object-contain"
+            width="400px"
+            height="400px"
+          />
+        </div>
+      </div>
+      <div class="carousel-area mb-20 border-t-2 border-[#194027] pt-20 border-opacity-40">
+        <div class="text-4xl text-center pb-10"> What others have to say</div>
+        <carousel :items-to-show="1" :items-to-scroll="1" :autoplay="3000" :pause-autoplay-on-hover="true">
+          <slide :key="1">
+            <div class="flex flex-col p-14">
+              <div class="flex image-area pb-10">
+                <img
+                  src="@/assets/vijay.jpeg"
+                  alt=""
+                  class="w-24 h-24 rounded-full"
+                />
+              </div>
+              <div class="flex text-xl text-start pb-6">
+                Dahlia added tremendous value at Yup by quickly ramping up,
+                participating and eventually co-leading some projects such as
+                the migration to Vue js as well as the company-wide
+                reporting/analytics systems. I was impressed by her ability to
+                learn new technologies, versatility with technology, as well as
+                working closely with her teammates. I would definitely work with
+                her again
+              </div>
+              <div class="flex title-area">
+                Vijaykumar Krishnaswamy - Engineering Manager @ Yup
+              </div>
+            </div>
+          </slide>
+          <slide :key="2">
+            <div>iam 2</div>
+          </slide>
+          <slide :key="3">
+            <div>i am 3</div>
+          </slide>
+
+          <template #addons>
+            <navigation />
+            <pagination />
+          </template>
+        </carousel>
+      </div>
+      <div class="flex flex-col contact info border-t-2 border-[#194027] py-32 border-opacity-40">
+        <div class="text-5xl text-center pb-10"> Get in touch.</div>
+        <p class="text-xl text-center break-words"> dahliaosalem@gmail.com</p>
+      </div>
+    </div>
   </div>
 </template>
 

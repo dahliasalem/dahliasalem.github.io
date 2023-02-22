@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'space': ['Space Grotesk', 'san-serif']
+        'space': ['Space Grotesk', 'san-serif'],
+        'raleway': ['Raleway', 'sans-serif']
       }
     },
   },

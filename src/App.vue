@@ -7,12 +7,12 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
   <div
     class="flex flex-col bg-no-repeat bg-cover w-full font-bold stars bg-[#FFF6ED] text-[#194027] text-base min-h-full font-raleway lg:items-center animate__fadeIn"
   >
-    <div class="all-content flex flex-col max-w-5xl lg:max-w-7xl mx-10 md:mx-28">
-      <div
-        class="flex flex-col lg:flex-row my-20 items-center"
-      >
-        <div class="my-name flex uppercase text-4xl sm:text-3xl md:text-8xl font-bold mb-10 mx-auto ">
-          Dahlia <br/>
+    <div class="all-content flex flex-col max-w-5xl lg:max-w-7xl md:mx-28 p-24">
+      <div class="flex flex-col lg:flex-row my-20 items-center">
+        <div
+          class="my-name flex uppercase text-4xl sm:text-3xl md:text-8xl font-bold mb-10 mx-auto text-center"
+        >
+          Dahlia <br />
           Salem
         </div>
         <div class="my-image flex">
@@ -36,7 +36,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         </div>
       </div>
       <div class="flex flex-col lg:flex-row justify-between mb-80">
-        <div class="my-name flex flex-wrap text-xl sm:text-3xl max-w-3xl">
+        <div class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-4">
           At the United Nations, <br /><br />
           I led the first nation-wide initiative to advance STEM education
           across 6 distinct districts in Egypt.<br /><br />
@@ -48,7 +48,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           with powerful stakeholders such as Ministry of Higher Education in
           Egypt and the Foreign, Commonwealth and Development Office in Britain.
         </div>
-        <div class="my-image flex text-2xl">
+        <div class="my-image flex text-2xl p-4">
           <img
             src="@/assets/unlogo.png"
             class="object-contain"
@@ -58,7 +58,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         </div>
       </div>
       <div class="flex flex-col lg:flex-row justify-between mb-80">
-        <div class="my-image flex text-2xl">
+        <div class="my-image flex text-2xl pr-8">
           <img
             src="@/assets/google.png"
             class="object-contain"
@@ -66,7 +66,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
             height="400px"
           />
         </div>
-        <div class="my-name flex flex-wrap text-xl sm:text-3xl max-w-3xl">
+        <div class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-4">
           At Google, <br /><br />
           I contributed to the success of two different product teams by
           immediately making strong technical and system design
@@ -82,7 +82,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         </div>
       </div>
       <div class="flex flex-col lg:flex-row justify-between mb-80">
-        <div class="my-name flex flex-wrap text-xl sm:text-3xl max-w-3xl">
+        <div class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-8">
           At Yup, <br /><br />
           I was employee number 5 who built the foundational processes necessary
           to hire and manage the schedules of hundreds of online tutors
@@ -93,7 +93,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           In addition, I designed and graded the hiring exams necessary to vet
           and on board new tutors on to the platform.
         </div>
-        <div class="my-image flex text-2xl">
+        <div class="my-image flex text-2xl p-4">
           <img
             src="@/assets/yup.svg"
             class="object-contain"
@@ -102,9 +102,17 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           />
         </div>
       </div>
-      <div class="carousel-area mb-20 border-t-2 border-[#194027] pt-20 border-opacity-40">
-        <div class="text-4xl text-center pb-10"> What others have to say</div>
-        <carousel :items-to-show="1" :items-to-scroll="1" :autoplay="3000" :pause-autoplay-on-hover="true">
+      <div
+        class="carousel-area mb-20 border-t-2 border-[#194027] pt-20 border-opacity-40"
+      >
+        <div class="text-4xl text-center pb-10">What others have to say</div>
+        <carousel
+          :items-to-show="1"
+          :items-to-scroll="1"
+          :autoplay="3000"
+          :pause-autoplay-on-hover="true"
+          :wrap-around="true"
+        >
           <slide :key="1">
             <div class="flex flex-col p-14">
               <div class="flex image-area pb-10">
@@ -129,10 +137,67 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
             </div>
           </slide>
           <slide :key="2">
-            <div>iam 2</div>
+            <div class="flex flex-col p-14">
+              <div class="flex image-area pb-10">
+                <img
+                  src="@/assets/ziyad.jpeg"
+                  alt=""
+                  class="w-24 h-24 rounded-full"
+                />
+              </div>
+              <div class="flex text-xl text-start pb-6">
+                Dahlia was a amazing contributor on our team, in terms of her
+                direct technical contributions but also in terms of her indirect
+                effect she had on the surrounding team. Her teammates felt her
+                enthusiasm, positive attitude and willingness to ship which in
+                turn led to productivity improvements for surrounding engineers.
+              </div>
+              <div class="flex title-area">
+                Ziyad Mir- Senior Engineer @ Google
+              </div>
+            </div>
           </slide>
           <slide :key="3">
-            <div>i am 3</div>
+            <div class="flex flex-col p-14">
+              <div class="flex image-area pb-10">
+                <img
+                  src="@/assets/aaron.jpeg"
+                  alt=""
+                  class="w-24 h-24 rounded-full"
+                />
+              </div>
+              <div class="flex text-xl text-start pb-6">
+                Dahlia joined Yup when she was only 18 years old and worked
+                under my supervision on the tutor operations team. Despite being
+                the youngest person on the team, she was one of our strongest
+                early hires due to both her eagerness to contribute as well as
+                her hunger to learn. Over the years, Dahlia made impactful
+                contributions to our tutor scheduling system and our tutor
+                hiring process, which we still use till today. We were very sad
+                to let her go to Google but incredibly proud of her impressive
+                growth and numerous achievements.
+              </div>
+              <div class="flex title-area">Aaron Price - CEO @ Yup</div>
+            </div>
+          </slide>
+          <slide :key="4">
+            <div class="flex flex-col p-14">
+              <div class="flex image-area pb-10">
+                <img
+                  src="@/assets/bleigh.jpeg"
+                  alt=""
+                  class="w-24 h-24 rounded-full"
+                />
+              </div>
+              <div class="flex text-xl text-start pb-6">
+                Dahlia ramped up quickly and was a solid contributor to our
+                team. She asked incisive questions about both technical and
+                product issues that helped us identify potential issues, and
+                worked collaboratively with her colleagues. I'd definitely work
+                with Dahlia again!
+              </div>
+              <div class="flex title-area">Michael Bleigh - Engineering Manager @ Google</div>
+            </div>
           </slide>
 
           <template #addons>
@@ -141,13 +206,14 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           </template>
         </carousel>
       </div>
-      <div class="flex flex-col contact info border-t-2 border-[#194027] py-32 border-opacity-40">
-        <div class="text-5xl text-center pb-10"> Get in touch.</div>
-        <p class="text-xl text-center break-words"> dahliaosalem@gmail.com</p>
+      <div
+        class="flex flex-col contact info border-t-2 border-[#194027] py-32 border-opacity-40"
+      >
+        <div class="text-5xl text-center pb-10">Get in touch.</div>
+        <p class="text-xl text-center break-words">dahliaosalem@gmail.com</p>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -127,9 +127,47 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           <span class="font-bold">Planet Facts Site,</span>
           I built a beautiful responsive website to display the latest facts
           about the planets in our universe. <br /><br />
-          I used the best in class front-end technologies available, some of the
-          technoclogies used are: Vue js, TypeScript, Tailwind, Vite, Pinia, Vue
-          Router <br />
+          I used the best in class front-end technologies available.
+          <br />
+          <p>
+            Some of the technoclogies used are:
+            <a
+              href="https://vuejs.org/"
+              target="_blank"
+              class="underline"
+              >Vue Js</a
+            >,
+            <a
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              class="underline"
+              >Typescript</a
+            >,
+            <a
+              href="https://tailwindcss.com/docs/installation"
+              target="_blank"
+              class="underline"
+              >Tailwind</a
+            >, 
+            <a
+              href="https://vitejs.dev/"
+              target="_blank"
+              class="underline"
+              >Vite</a
+            >, 
+            <a
+              href="https://pinia.vuejs.org/"
+              target="_blank"
+              class="underline"
+              >Pinia</a
+            >, 
+            <a
+              href="https://router.vuejs.org/"
+              target="_blank"
+              class="underline"
+              >Vue Router</a
+            >
+          </p>
           <p>
             Checkout the live site:
             <a

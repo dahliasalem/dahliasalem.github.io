@@ -5,12 +5,14 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 <template>
   <div
-    class="flex flex-col bg-no-repeat bg-cover w-full font-bold stars bg-[#FFF6ED] text-[#194027] text-base min-h-full font-raleway lg:items-center animate__fadeIn"
+    class="flex flex-col bg-no-repeat bg-cover w-full stars bg-[#FFF6ED] text-[#194027] text-base min-h-full font-raleway lg:items-center"
   >
-    <div class="all-content flex flex-col max-w-5xl lg:max-w-7xl md:mx-28 p-24">
+    <div
+      class="all-content flex flex-col max-w-5xl lg:max-w-7xl md:mx-28 p-12 lg:p-24 fade-in font-light"
+    >
       <div class="flex flex-col lg:flex-row my-20 items-center">
         <div
-          class="my-name flex uppercase text-4xl sm:text-3xl md:text-8xl font-bold mb-10 mx-auto text-center"
+          class="my-name flex uppercase text-4xl sm:text-3xl md:text-8xl mb-10 mx-auto text-center font-medium"
         >
           Dahlia <br />
           Salem
@@ -28,7 +30,9 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         <div class="my-name flex uppercase font-extrabold pr-10 pb-4 lg;pb-0">
           About Dahlia
         </div>
-        <div class="my-image flex text-xl sm:text-3xl flex-wrap">
+        <div
+          class="my-image flex text-xl sm:text-3xl sm:leading-relaxed flex-wrap"
+        >
           I am an ex-Google Engineer with more than 4 years of silicon valley
           industry experience, I bring a unique mixture of excellent technical
           ability and excellent communication skills that guarantee the success
@@ -36,7 +40,9 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         </div>
       </div>
       <div class="flex flex-col lg:flex-row justify-between mb-80">
-        <div class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-4">
+        <div
+          class="my-name flex flex-wrap text-xl sm:text-2xl p-4 lg:w-3/5 lg:mr-8 order-2 lg:order-none"
+        >
           At the United Nations, <br /><br />
           I led the first nation-wide initiative to advance STEM education
           across 6 distinct districts in Egypt.<br /><br />
@@ -48,7 +54,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           with powerful stakeholders such as Ministry of Higher Education in
           Egypt and the Foreign, Commonwealth and Development Office in Britain.
         </div>
-        <div class="my-image flex text-2xl p-4">
+        <div class="my-image flex p-4 lg:w-2/5 order-1 lg:order-none">
           <img
             src="@/assets/unlogo.png"
             class="object-contain"
@@ -58,7 +64,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         </div>
       </div>
       <div class="flex flex-col lg:flex-row justify-between mb-80">
-        <div class="my-image flex text-2xl pr-8">
+        <div class="my-image flex text-2xl pr-8 lg:w-2/5 lg:mr-8">
           <img
             src="@/assets/google.png"
             class="object-contain"
@@ -66,7 +72,9 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
             height="400px"
           />
         </div>
-        <div class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-4">
+        <div
+          class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-4 lg:w-3/5"
+        >
           At Google, <br /><br />
           I contributed to the success of two different product teams by
           immediately making strong technical and system design
@@ -82,7 +90,9 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         </div>
       </div>
       <div class="flex flex-col lg:flex-row justify-between mb-80">
-        <div class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-8">
+        <div
+          class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-8 lg:w-3/5 order-2 lg:order-none"
+        >
           At Yup, <br /><br />
           I was employee number 5 who built the foundational processes necessary
           to hire and manage the schedules of hundreds of online tutors
@@ -93,7 +103,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           In addition, I designed and graded the hiring exams necessary to vet
           and on board new tutors on to the platform.
         </div>
-        <div class="my-image flex text-2xl p-4">
+        <div class="my-image flex text-2xl p-4 lg:w-2/5 order-1 lg:order-none">
           <img
             src="@/assets/yup.svg"
             class="object-contain"
@@ -102,10 +112,49 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           />
         </div>
       </div>
+      <div class="flex flex-col lg:flex-row justify-between mb-80">
+        <div class="my-image flex text-2xl p-4 lg:w-3/5 rounded-lg">
+          <a href="https://planets-proj.vercel.app/" target="_blank">
+            <img
+              src="@/assets/planet-site-img.png"
+              class="object-contain rounded-lg"
+            />
+          </a>
+        </div>
+        <div
+          class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-8 lg:w-2/5"
+        >
+          <span class="font-bold">Planet Facts Site,</span>
+          I built a beautiful responsive website to display the latest facts
+          about the planets in our universe. <br /><br />
+          I used the best in class front-end technologies available, some of the
+          technoclogies used are: Vue js, TypeScript, Tailwind, Vite, Pinia, Vue
+          Router <br />
+          <p>
+            Checkout the live site:
+            <a
+              href="https://planets-proj.vercel.app/"
+              target="_blank"
+              class="underline"
+              >here</a
+            >
+            <br />
+            And view the source code:
+            <a
+              href="https://github.com/dahliasalem/planets-proj#readme"
+              target="_blank"
+              class="underline"
+              >here</a
+            >
+          </p>
+        </div>
+      </div>
       <div
         class="carousel-area mb-20 border-t-2 border-[#194027] pt-20 border-opacity-40"
       >
-        <div class="text-4xl text-center pb-10">What others have to say</div>
+        <div class="text-4xl text-center pb-10">
+          What colleagues have to say
+        </div>
         <carousel
           :items-to-show="1"
           :items-to-scroll="1"
@@ -196,7 +245,9 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
                 worked collaboratively with her colleagues. I'd definitely work
                 with Dahlia again!
               </div>
-              <div class="flex title-area">Michael Bleigh - Engineering Manager @ Google</div>
+              <div class="flex title-area">
+                Michael Bleigh - Engineering Manager @ Google
+              </div>
             </div>
           </slide>
 
@@ -216,4 +267,17 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade-in {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>

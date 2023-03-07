@@ -93,15 +93,24 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         <div
           class="my-name flex flex-wrap text-xl sm:text-2xl max-w-3xl p-8 lg:w-3/5 order-2 lg:order-none"
         >
-          At Yup, <br /><br />
-          I was employee number 5 who built the foundational processes necessary
-          to hire and manage the schedules of hundreds of online tutors
-          distributed around the globe.<br /><br />
-          I used sophisticated Google Sheets along with several server scripts
-          to create a preliminary system that schedules and manages tutor
-          availability for the 24-hour tutoring service.<br /><br />
-          In addition, I designed and graded the hiring exams necessary to vet
-          and on board new tutors on to the platform.
+          <p>
+            At Yup, <br /><br />
+            I was employee number 5 who built the foundational processes
+            necessary to hire and manage the schedules of hundreds of online
+            tutors distributed around the globe.<br /><br />
+            I transitioned into a software engineering role where I co-lead the
+            effort to transform our entire web technology stack to from our
+            legacy system of backbone.js to a modern and robust stack using
+            <a href="https://vuejs.org/" target="_blank" class="underline"
+              >Vue Js</a
+            >
+            and
+            <a href="https://webpack.js.org/" target="_blank" class="underline"
+              >Webpack</a
+            ><br /><br />
+            In addition, I designed and implemnted the building blocks of the
+            company's reporting infrastructure using AWS and Chartio.
+          </p>
         </div>
         <div class="my-image flex text-2xl p-4 lg:w-2/5 order-1 lg:order-none">
           <img
@@ -131,10 +140,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
           <br />
           <p>
             Some of the technoclogies used are:
-            <a
-              href="https://vuejs.org/"
-              target="_blank"
-              class="underline"
+            <a href="https://vuejs.org/" target="_blank" class="underline"
               >Vue Js</a
             >,
             <a
@@ -148,19 +154,13 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
               target="_blank"
               class="underline"
               >Tailwind</a
-            >, 
-            <a
-              href="https://vitejs.dev/"
-              target="_blank"
-              class="underline"
+            >,
+            <a href="https://vitejs.dev/" target="_blank" class="underline"
               >Vite</a
-            >, 
-            <a
-              href="https://pinia.vuejs.org/"
-              target="_blank"
-              class="underline"
+            >,
+            <a href="https://pinia.vuejs.org/" target="_blank" class="underline"
               >Pinia</a
-            >, 
+            >,
             <a
               href="https://router.vuejs.org/"
               target="_blank"

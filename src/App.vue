@@ -33,7 +33,7 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         <div
           class="my-image flex text-xl sm:text-3xl sm:leading-relaxed flex-wrap"
         >
-          I am an ex-Google Engineer with more than 4 years of silicon valley
+          I am an ex-Google Engineer with more than 3 years of silicon valley
           industry experience, I bring a unique mixture of excellent technical
           ability and excellent communication skills that guarantee the success
           of any project.
